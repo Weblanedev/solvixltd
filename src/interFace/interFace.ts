@@ -136,15 +136,6 @@ export interface SocialsType {
   iconClassNames: string;
 }
 
-// socials-data type
-export interface ContactType {
-  name: string;
-  phone: string[];
-  email: string[];
-  address: string[];
-  googleMapUrl: string;
-}
-
 //product select option-type
 export type NiceSelcetType = {
   id: number;

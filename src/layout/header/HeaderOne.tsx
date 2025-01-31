@@ -1,9 +1,8 @@
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import logoImg from '../../../public/assets/img/logo/counterchain-logo.svg';
-import Image from 'next/image';
 import Menu from './components/Menu';
 import useGlobalContext from '@/hooks/use-context';
+import { brand_data } from '@/data/brand-data';
 
 const HeaderOne = () => {
   const searchRef = useRef(null);
@@ -41,8 +40,17 @@ const HeaderOne = () => {
                 <div className="header-main-content-wrapper">
                   <div className="header-main-left header-main-left-header1">
                     <div className="header-logo header1-logo">
-                      <Link href="/" className="logo-bl">
-                        <Image src={logoImg} alt="logo-img" />
+                      <Link
+                        href="/"
+                        className="d-flex align-items-center"
+                        style={{
+                          fontSize: '30px',
+                          fontWeight: 'bold',
+                          color: '#000',
+                        }}
+                      >
+                        {/* <Image src={logo} alt="logo" width={150} /> */}
+                        {brand_data.name}
                       </Link>
                     </div>
                   </div>
