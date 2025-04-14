@@ -2,9 +2,9 @@ import React from 'react';
 import MobileMenu from './MobileMenu';
 import useGlobalContext from '@/hooks/use-context';
 import Link from 'next/link';
-import logo from '../../../../public/assets/img/logo/counterchain-logo.svg';
 import Image from 'next/image';
 import socials_data from '@/data/social-data';
+import { brand_data } from '@/data/brand-data';
 const SidebarMenu = () => {
   const { sideMenuOpen, setSideMenuOpen } = useGlobalContext();
   return (
@@ -18,7 +18,15 @@ const SidebarMenu = () => {
                 className="col-9"
               >
                 <Link href="/">
-                  <Image src={logo} alt="Logo" />
+                  <p
+                    style={{
+                      fontSize: '30px',
+                      fontWeight: 'bold',
+                      color: '#000',
+                    }}
+                  >
+                    {brand_data.name}
+                  </p>
                 </Link>
               </div>
               <div

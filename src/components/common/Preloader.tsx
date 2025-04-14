@@ -1,7 +1,7 @@
 import React from 'react';
-import logoImg from '../../../public/assets/img/logo/counterchain-logo.svg';
 import preloaderIMg from '../../../public/assets/img/logo/preloader.svg';
 import Image from 'next/image';
+import { brand_data } from '@/data/brand-data';
 
 const Preloader = () => {
   return (
@@ -10,7 +10,15 @@ const Preloader = () => {
         <div id="loading-center">
           <div id="loading-center-absolute">
             <div className="loading-icon text-center d-flex flex-column align-items-center justify-content-center">
-              <Image src={logoImg} alt="logo-img" />
+              <p
+                style={{
+                  fontSize: '30px',
+                  fontWeight: 'bold',
+                  color: '#000',
+                }}
+              >
+                {brand_data.name}
+              </p>
               <Image className="loading-logo" src={preloaderIMg} alt="img" />
             </div>
           </div>
