@@ -2,7 +2,6 @@ import React from 'react';
 import MobileMenu from './MobileMenu';
 import useGlobalContext from '@/hooks/use-context';
 import Link from 'next/link';
-import Image from 'next/image';
 import socials_data from '@/data/social-data';
 import { brand_data } from '@/data/brand-data';
 const SidebarMenu = () => {
